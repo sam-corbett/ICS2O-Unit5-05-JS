@@ -4,12 +4,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Triangle Classifier" />
+    <meta name="description" content="Triangle Type Calculator" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="sam-corbett" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>GitHub page as PWA template</title>
-    <link rel="canonical" href="https://sam-corbett/ICS2O-Unit5-05-JS/" />
+    <title>Triangle Type Calculator</title>
+    <link
+      rel="canonical"
+      href="https://sam-corbett.github.io/ICS2O-Unit5-05-JS/"
+    />
     <link rel="manifest" href="/ICS2O-Unit5-05-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
@@ -28,49 +31,104 @@
     </noscript>
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+      href="https://code.getmdl.io/1.3.0/material.yellow-amber.min.css"
       media="none"
       onload="if(media!='all')media='all'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+        href="https://code.getmdl.io/1.3.0/material.yellow-amber.min.css"
       />
     </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>Triangle Classifier</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Triangle Classifier</span>
+          <span class="mdl-layout-title">Triangle Type Calculator</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <p></p>
+        <h5>This program will calculate what type of triangle you have, much like <a href="./https://www.mathwarehouse.com/geometry-calculator/">Math Warehouse's Calculator</a>. </h5>
+        <p>Type in the side lengths of your triangle that add up to 180°.</p>
+        <p>If done correctly, the calculator will tell you if you have a equilateral, isoceles, or scalene triangle!.</p>
         <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
+          src="./images/different_triangles.svg"
+          alt="triangles"
+          width="50%"
+          height="50%"
         />
         <p></p>
+        <!-- Numeric Textfield with Floating Label -->
+        <form action="#">
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="[0-9]*(\.[0-9]+)?"
+              id="side-a"
+            />
+            <label class="mdl-textfield__label" for="side-a">Side A...</label>
+            <span class="mdl-textfield__error"
+              >Input is not a valid length!</span
+            >
+          </div>
+        </form>
+        <p></p>
+        <!-- Numeric Textfield with Floating Label -->
+        <form action="#">
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="[0-9]*(\.[0-9]+)?"
+              id="side-b"
+            />
+            <label class="mdl-textfield__label" for="side-b">Side B...</label>
+            <span class="mdl-textfield__error"
+              >Input is not a valid length!</span
+            >
+          </div>
+        </form>
+        <p></p>
+        <!-- Numeric Textfield with Floating Label -->
+        <form action="#">
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="[0-9]*(\.[0-9]+)?"
+              id="side-c"
+            />
+            <label class="mdl-textfield__label" for="side-c">Side C...</label>
+            <span class="mdl-textfield__error"
+              >Input is not a valid length!</span
+            >
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="myButtonClicked()"
         >
-          Say "Hello, World!"
+          Check
         </button>
         <!-- basic text -->
         <p></p>
-        <div id="hello-world"></div>
+        <div id="triangle-type"></div>
       </main>
     </div>
   </body>
