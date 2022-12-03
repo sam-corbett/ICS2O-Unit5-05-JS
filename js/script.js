@@ -48,16 +48,16 @@ function myButtonClicked() {
   if (sumOfAngles == 180) {
     if (angleA == angleB && angleB == angleC && angleA == angleC) {
       document.getElementById("triangle-type").innerHTML =
-        "<p>This is an equilateral triangle.</p>"
+        "<p>The Type of Triangle is Equilateral.</p>"
     } else if (angleA == angleB || angleB == angleC || angleA == angleC) {
       document.getElementById("triangle-type").innerHTML =
-        "<p>This is an isosceles triangle.</p>"
+        "<p>The Type of Triangle is Isoceles.</p>"
     } else {
       document.getElementById("triangle-type").innerHTML =
-        "<p>This is an scalene triangle.</p>"
+        "<p>The Type of Triangle is Scalene.</p>"
     }
   } else {
     document.getElementById("triangle-type").innerHTML =
-      "<p>This is not a triangle.</p>"
+      "<p>This is not a triangle, since it's angles don't add up to 180°. Please Try again.</p>"
   }
 }
