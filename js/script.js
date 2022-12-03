@@ -1,6 +1,6 @@
-// Copyright (c) 2022 Claire Bedrossian All rights reserved
+// Copyright (c) 2022 Sam Corbett All rights reserved
 //
-// Created by: Claire Bedrossian
+// Created by: Sam Corbett
 // Created on: Nov 2022
 // This file contains the JS functions for index.html
 
